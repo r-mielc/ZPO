@@ -1,0 +1,18 @@
+name: vehicle-safety
+
+services:
+  dev:
+    build:
+      # Kontekst budowania to repo; .dockerignore w jego katalogu głównym nadal działa.
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    # Całe repo jest widoczne w VS Code, a colcon działa z katalogu vehicle_ws.
+    working_dir: /workspace/project/vehicle_ws
+    volumes:
+      - ..:/workspace/project
+    # Pliki wygenerowane przez colcon będą należeć do użytkownika z hosta.
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    environment:
+      HOME: /tmp
+    stdin_open: true
+    tty: true

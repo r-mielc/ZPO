@@ -1,0 +1,14 @@
+{
+  "name": "Vehicle Safety (ROS 2 Jazzy)",
+  "dockerComposeFile": "compose.yaml",
+  "service": "dev",
+  "workspaceFolder": "/workspace/project",
+  "shutdownAction": "stopCompose",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.cwd": "/workspace/project/vehicle_ws"
+      }
+    }
+  }
+}

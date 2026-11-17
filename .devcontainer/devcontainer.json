@@ -1,5 +1,5 @@
 {
-  "name": "Vehicle Safety (ROS 2 Jazzy)",
+  "name": "Autonoumous Car Dev Container",
   "dockerComposeFile": "compose.yaml",
   "service": "dev",
   "workspaceFolder": "/workspace/project",
